@@ -16,6 +16,8 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Custom dari Tim Stiki, boleh edit css disini saja -->
+    <link rel="stylesheet" href="assets/css/custom.css">
 
     <!-- Font Awesome ICON -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
