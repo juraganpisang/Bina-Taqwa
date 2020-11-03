@@ -12,12 +12,12 @@
     <title>Bina Taqwa</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="assets/img/favicon.png">
+    <link rel="icon" href="<?php echo base_url(); ?>assets/img/favicon.png">
 
     <!-- Core Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
     <!-- Custom dari Tim Stiki, boleh edit css disini saja -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/custom.css">
 
     <!-- Font Awesome ICON -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -39,11 +39,11 @@
                     <div class="col-12 h-100">
                         <div class="header-content h-100 d-flex align-items-center justify-content-between">
                             <div class="academy-logo">
-                                <a href="beranda"><img src="assets/img/logo.png" style="height:75px;" alt=""></a>
+                                <a href="beranda"><img src="<?php echo base_url(); ?>assets/img/logo.png" style="height:75px;" alt=""></a>
                             </div>
-                            <div class="login-content">
+                            <!-- <div class="login-content">
                                 <a href="#">Register / Login</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -73,23 +73,23 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li><a href="beranda"><i class="fas fa-home"></i> Beranda</a></li>
+                                    <li><a href="<?= base_url(); ?>beranda"><i class="fas fa-home"></i> Beranda</a></li>
                                     <li><a href="#"><i class="fas fa-user"></i> Profil</a>
                                         <ul style="width: 250px;" class="dropdown">
-                                            <li><a href="tentang-yayasan">Tentang Yayasan</a></li>
-                                            <li><a href="visi-misi">Visi dan Misi</a></li>
-                                            <li><a href="struktur-organisasi">Struktur Organisasi</a></li>
-                                            <li><a href="informasi-donatur">Informasi Donatur</a></li>
+                                            <li><a href="<?= base_url(); ?>profil/tentang_yayasan">Tentang Yayasan</a></li>
+                                            <li><a href="<?= base_url(); ?>profil/visi_misi">Visi dan Misi</a></li>
+                                            <li><a href="<?= base_url(); ?>profil/struktur_organisasi">Struktur Organisasi</a></li>
+                                            <li><a href="<?= base_url(); ?>profil/informasi_donatur">Informasi Donatur</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="berita"><i class="fas fa-newspaper"></i> Berita</a></li>
+                                    <li><a href="<?= base_url(); ?>berita"><i class="fas fa-newspaper"></i> Berita</a></li>
                                     <li><a href="#"><i class="fas fa-suitcase"></i> Program</a>
                                         <ul style="width: 200px;" class="dropdown">
-                                            <li><a href="program-manasik-haji">Manasik Haji</a></li>
-                                            <li><a href="program-kegiatan-dakwah">Kegiatan Dakwah</a></li>
+                                            <li><a href="<?= base_url(); ?>program/manasik_haji">Manasik Haji</a></li>
+                                            <li><a href="<?= base_url(); ?>program/kegiatan_dakwah">Kegiatan Dakwah</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="kontak"><i class="fas fa-phone-alt"></i> Kontak Kami</a></li>
+                                    <li><a href="<?= base_url(); ?>kontak"><i class="fas fa-phone-alt"></i> Kontak Kami</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->

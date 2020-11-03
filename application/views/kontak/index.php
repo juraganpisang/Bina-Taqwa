@@ -1,18 +1,19 @@
   <!-- ##### Breadcumb Area Start ##### -->
-  <div class="breadcumb-area bg-img" style="background-image: url(assets/img/bg-img/breadcumb.jpg);">
+  <div class="breadcumb-area bg-img margin-slide" style="background-image: url(assets/img/bg-img/breadcumb.jpg);">
       <div class="bradcumbContent">
-          <h2>Contact</h2>
+          <h2>Kontak Kami</h2>
       </div>
   </div>
   <!-- ##### Breadcumb Area End ##### -->
 
   <!-- ##### Contact Area Start ##### -->
-  <section class="contact-area margin-kontak-area-1">
+  <!-- <section class="contact-area margin-kontak-area-1"> -->
+    <div class="blog-area mt-50 section-padding-100">
       <div class="container">
           <div class="row">
               <div class="col-12">
-                  <div class="contact-content">
-                      <div class="row margin-kontak-area-2">
+                  <div class="academy-blog-posts">
+                      <div class="row ">
                           <!-- Contact Information -->
                           <div class="col-12 col-lg-5">
                               <div class="contact-information wow fadeInUp" data-wow-delay="400ms">
@@ -100,4 +101,4 @@
               </div>
           </div>
       </div>
-  </section>
+    </div>

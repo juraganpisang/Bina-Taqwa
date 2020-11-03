@@ -18,16 +18,16 @@ class Program extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function program-manasik-haji()
+	public function manasik_haji()
 	{
         $this->load->view('templates/header');
-		$this->load->view('Program/program-manasik-haji');
+		$this->load->view('Program/manasik_haji');
         $this->load->view('templates/footer');
 	}
-	public function program-kegiatan-dakwah()
+	public function kegiatan_dakwah()
 	{
         $this->load->view('templates/header');
-		$this->load->view('Program/program-kegiatan-dakwah');
+		$this->load->view('Program/kegiatan_dakwah');
         $this->load->view('templates/footer');
 	}
 }

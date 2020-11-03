@@ -18,28 +18,28 @@ class Profil extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function tentang-yayasan()
+	public function tentang_yayasan()
 	{
         $this->load->view('templates/header');
-		$this->load->view('profil/tentang-yayasan');
+		$this->load->view('profil/tentang_yayasan');
         $this->load->view('templates/footer');
 	}
-	public function visi-misi()
+	public function visi_misi()
 	{
         $this->load->view('templates/header');
-		$this->load->view('profil/visi-misi');
+		$this->load->view('profil/visi_misi');
         $this->load->view('templates/footer');
 	}
-	public function struktur-organisasi()
+	public function struktur_organisasi()
 	{
         $this->load->view('templates/header');
-		$this->load->view('profil/struktur-organisasi');
+		$this->load->view('profil/struktur_organisasi');
         $this->load->view('templates/footer');
 	}
-	public function informasi-donatur()
+	public function informasi_donatur()
 	{
         $this->load->view('templates/header');
-		$this->load->view('profil/informasi-donatur');
+		$this->load->view('profil/informasi_donatur');
         $this->load->view('templates/footer');
 	}
 }

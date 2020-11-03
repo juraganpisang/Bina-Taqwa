@@ -1,4 +1,4 @@
-<div class="hero-slides owl-carousel">
+<div class="hero-slides owl-carousel margin-slide">
 
     <!-- Single Hero Slide -->
     <div class="single-hero-slide bg-img" style="background-image: url(assets/img/slider1.png);">
