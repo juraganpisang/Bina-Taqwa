@@ -1,11 +1,12 @@
     <!-- ##### Breadcumb Area Start ##### -->
-    <div class="breadcumb-area bg-img margin-slide" style="background-image: url(assets/img/bg-img/breadcumb.jpg);">
+    <div class="breadcumb-area bg-img margin-slide" style="background-image: url(<?= base_url(); ?>assets/img/bg-img/breadcumb.jpg);">
         <div class="bradcumbContent">
             <h2>Berita</h2>
             <nav aria-label="breadcrumb" class="bg-white">
                 <ol class="breadcrumb bg-white">
                     <li class="breadcrumb-item"><a href="<?= base_url(); ?>beranda">Beranda</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Berita</li>
+                    <li class="breadcrumb-item"><a href="<?= base_url(); ?>berita">Berita</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Detail Berita</li>
                 </ol>
             </nav>
         </div>
@@ -25,7 +26,7 @@
                                 <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
                                     <!-- Post Thumb -->
                                     <div class="blog-post-thumb mb-50">
-                                        <img src="assets/img/blog-img/1.jpg" alt="">
+                                        <img src="<?= base_url(); ?>assets/img/blog-img/1.jpg" alt="">
                                     </div>
                                     <!-- Post Title -->
                                     <a href="#" class="post-title">Berita 1</a>
@@ -36,40 +37,9 @@
                                     <!-- Post Excerpt -->
                                     <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est.</p>
                                     <!-- Read More btn -->
-                                    <a href="<?= base_url(); ?>berita/detail_berita" class="btn academy-btn btn-sm mt-15">Read More</a>
-                                </div>
-                            </div>
-
-                            <!-- Single Blog Start -->
-                            <div class="col-12">
-                                <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="400ms">
-                                    <!-- Post Thumb -->
-                                    <div class="blog-post-thumb mb-50">
-                                        <img src="assets/img/blog-img/2.jpg" alt="">
-                                    </div>
-                                    <!-- Post Title -->
-                                    <a href="#" class="post-title">Berita 2</a>
-                                    <!-- Post Meta -->
-                                    <div class="post-meta">
-                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a></p>
-                                    </div>
-                                    <!-- Post Excerpt -->
-                                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est.</p>
-                                    <!-- Read More btn -->
-                                    <a href="#" class="btn academy-btn btn-sm mt-15">Read More</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Pagination Area Start -->
-                    <div class="academy-pagination-area wow fadeInUp" data-wow-delay="400ms">
-                        <nav>
-                            <ul class="pagination">
-                                <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                                <li class="page-item"><a class="page-link" href="#">02</a></li>
-                                <li class="page-item"><a class="page-link" href="#">03</a></li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
 
@@ -89,7 +59,7 @@
                             <!-- Single Latest Blog Post -->
                             <div class="single-latest-blog-post d-flex mb-30">
                                 <div class="latest-blog-post-thumb">
-                                    <img src="assets/img/blog-img/lb-1.jpg" alt="">
+                                    <img src="<?= base_url(); ?>assets/img/blog-img/lb-1.jpg" alt="">
                                 </div>
                                 <div class="latest-blog-post-content">
                                     <a href="#" class="post-title">
@@ -101,7 +71,7 @@
                             <!-- Single Latest Blog Post -->
                             <div class="single-latest-blog-post d-flex mb-30">
                                 <div class="latest-blog-post-thumb">
-                                    <img src="assets/img/blog-img/lb-2.jpg" alt="">
+                                    <img src="<?= base_url(); ?>assets/img/blog-img/lb-2.jpg" alt="">
                                 </div>
                                 <div class="latest-blog-post-content">
                                     <a href="#" class="post-title">
@@ -113,7 +83,7 @@
                             <!-- Single Latest Blog Post -->
                             <div class="single-latest-blog-post d-flex mb-30">
                                 <div class="latest-blog-post-thumb">
-                                    <img src="assets/img/blog-img/lb-3.jpg" alt="">
+                                    <img src="<?= base_url(); ?>assets/img/blog-img/lb-3.jpg" alt="">
                                 </div>
                                 <div class="latest-blog-post-content">
                                     <a href="#" class="post-title">
@@ -125,7 +95,7 @@
                             <!-- Single Latest Blog Post -->
                             <div class="single-latest-blog-post d-flex">
                                 <div class="latest-blog-post-thumb">
-                                    <img src="assets/img/blog-img/lb-4.jpg" alt="">
+                                    <img src="<?= base_url(); ?>assets/img/blog-img/lb-4.jpg" alt="">
                                 </div>
                                 <div class="latest-blog-post-content">
                                     <a href="#" class="post-title">

@@ -2,121 +2,132 @@
     <!-- ##### Breadcumb Area Start ##### -->
     <div class="breadcumb-area bg-img margin-slide" style="background-image: url(<?php echo base_url(); ?>assets/img/bg-img/breadcumb.jpg);">
         <div class="bradcumbContent">
-            <h2>About Us</h2>
+            <h2>Kegiatan Dakwah</h2>
+            <nav aria-label="breadcrumb" class="bg-white">
+                <ol class="breadcrumb bg-white">
+                    <li class="breadcrumb-item"><a href="<?= base_url(); ?>beranda">Beranda</a></li>
+                    <li class="breadcrumb-item">Program</li>
+                    <li class="breadcrumb-item active" aria-current="page">Kegiatan Dakwah</li>
+                </ol>
+            </nav>
         </div>
     </div>
     <!-- ##### Breadcumb Area End ##### -->
 
-    <!-- ##### About Us Area Start ##### -->
-    <section class="about-us-area mt-50 section-padding-100">
+    <!-- ##### Blog Area Start ##### -->
+    <div class="blog-area mt-50 section-padding-100">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
-                        <span>The Best</span>
-                        <h3>We are the Academy</h3>
+                <div class="col-12 col-md-12">
+                    <div class="academy-blog-posts">
+                        <div class="row">
+                            <!-- Single Blog Start -->
+                            <div class="col-12">
+                                <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
+                                    <!-- Post Thumb -->
+                                    <div class="blog-post-thumb mb-50">
+                                        <img src="<?php echo base_url(); ?>assets/img/blog-img/1.jpg" alt="">
+                                    </div>
+                                    <!-- Post Title -->
+                                    <a href="#" class="post-title">Berita 1</a>
+                                    <!-- Post Meta -->
+                                    <div class="post-meta">
+                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> </p>
+                                    </div>
+                                    <!-- Post Excerpt -->
+                                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est.</p>
+                                    <!-- Read More btn -->
+                                    <a href="#" class="btn academy-btn btn-sm mt-15">Read More</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed faucibus mauris vitae urna consectetur, sit amet maximus nisl sagittis. Ut in iaculis enim, et pulvinar mauris. Etiam tristique magna eget velit consectetur, a tincidunt velit dictum. Cras vulputate metus id felis ornare hendrerit. Maecenas sodales suscipit ipsum.</p>
-                </div>
-                <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="500ms">
-                    <p>Vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed faucibus mauris vitae urna consectetur, sit amet maximus nisl sagittis. Ut in iaculis enim, et pulvinar mauris. Etiam tristique magna eget velit consectetur, a tincidunt velit dictum. Cras vulputate metus id felis ornare hendrerit. Maecenas sodales suscipit ipsum.</p>
+                <div class="col-12">
+                    <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
+                        <h3>Post Terkait</h3>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
-                    <div class="about-slides owl-carousel mt-100 wow fadeInUp" data-wow-delay="600ms">
-                        <img src="<?php echo base_url(); ?>assets/img/bg-img/bg-3.jpg" alt="">
-                        <img src="<?php echo base_url(); ?>assets/img/bg-img/bg-2.jpg" alt="">
-                        <img src="<?php echo base_url(); ?>assets/img/bg-img/bg-1.jpg" alt="">
+                <div class="col-12 col-md-4">
+                    <div class="academy-blog-posts">
+                        <div class="row">
+                            <!-- Single Blog Start -->
+                            <div class="col-12">
+                                <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
+                                    <!-- Post Thumb -->
+                                    <div class="blog-post-thumb mb-50">
+                                        <img src="<?php echo base_url(); ?>assets/img/blog-img/1.jpg" alt="">
+                                    </div>
+                                    <!-- Post Title -->
+                                    <a href="#" class="post-title">Berita 1</a>
+                                    <!-- Post Meta -->
+                                    <div class="post-meta">
+                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> </p>
+                                    </div>
+                                    <!-- Post Excerpt -->
+                                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est.</p>
+                                    <!-- Read More btn -->
+                                    <a href="#" class="btn academy-btn btn-sm mt-15">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="academy-blog-posts">
+                        <div class="row">
+                            <!-- Single Blog Start -->
+                            <div class="col-12">
+                                <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
+                                    <!-- Post Thumb -->
+                                    <div class="blog-post-thumb mb-50">
+                                        <img src="<?php echo base_url(); ?>assets/img/blog-img/1.jpg" alt="">
+                                    </div>
+                                    <!-- Post Title -->
+                                    <a href="#" class="post-title">Berita 1</a>
+                                    <!-- Post Meta -->
+                                    <div class="post-meta">
+                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> </p>
+                                    </div>
+                                    <!-- Post Excerpt -->
+                                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est.</p>
+                                    <!-- Read More btn -->
+                                    <a href="#" class="btn academy-btn btn-sm mt-15">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="academy-blog-posts">
+                        <div class="row">
+                            <!-- Single Blog Start -->
+                            <div class="col-12">
+                                <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
+                                    <!-- Post Thumb -->
+                                    <div class="blog-post-thumb mb-50">
+                                        <img src="<?php echo base_url(); ?>assets/img/blog-img/1.jpg" alt="">
+                                    </div>
+                                    <!-- Post Title -->
+                                    <a href="#" class="post-title">Berita 1</a>
+                                    <!-- Post Meta -->
+                                    <div class="post-meta">
+                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> </p>
+                                    </div>
+                                    <!-- Post Excerpt -->
+                                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est.</p>
+                                    <!-- Read More btn -->
+                                    <a href="#" class="btn academy-btn btn-sm mt-15">Read More</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ##### About Us Area End ##### -->
-
-    <!-- ##### Team Area Start ##### -->
-    <section class="teachers-area section-padding-0-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
-                        <span>The Best</span>
-                        <h3>Meet the Teachers</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- Single Teachers -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="400ms">
-                        <!-- Thumbnail -->
-                        <div class="teachers-thumbnail">
-                            <img src="<?php echo base_url(); ?>assets/img/bg-img/tea1.jpg" alt="">
-                        </div>
-                        <!-- Meta Info -->
-                        <div class="teachers-info mt-30">
-                            <h5>Maria D. Smith</h5>
-                            <span>Marketing Proffesor</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Teachers -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="500ms">
-                        <!-- Thumbnail -->
-                        <div class="teachers-thumbnail">
-                            <img src="<?php echo base_url(); ?>assets/img/bg-img/tea2.jpg" alt="">
-                        </div>
-                        <!-- Meta Info -->
-                        <div class="teachers-info mt-30">
-                            <h5>Simon Duval</h5>
-                            <span>Digital Proffesor</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Teachers -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="600ms">
-                        <!-- Thumbnail -->
-                        <div class="teachers-thumbnail">
-                            <img src="<?php echo base_url(); ?>assets/img/bg-img/tea3.jpg" alt="">
-                        </div>
-                        <!-- Meta Info -->
-                        <div class="teachers-info mt-30">
-                            <h5>James Hogan</h5>
-                            <span>HTML Proffesor</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Teachers -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="700ms">
-                        <!-- Thumbnail -->
-                        <div class="teachers-thumbnail">
-                            <img src="<?php echo base_url(); ?>assets/img/bg-img/tea4.jpg" alt="">
-                        </div>
-                        <!-- Meta Info -->
-                        <div class="teachers-info mt-30">
-                            <h5>Claudia Williams</h5>
-                            <span>Marketing Proffesor</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <div class="view-all text-center wow fadeInUp" data-wow-delay="800ms">
-                        <a href="#" class="btn academy-btn">All Teachers</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Features Area Start ##### -->
+    </div>
+    <!-- ##### Blog Area End ##### -->

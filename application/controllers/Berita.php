@@ -24,4 +24,9 @@ class Berita extends CI_Controller {
 		$this->load->view('berita/index');
         $this->load->view('templates/footer');
 	}
+	public function detail_berita(){
+		$this->load->view('templates/header');
+		$this->load->view('berita/detail');
+        $this->load->view('templates/footer');
+	}
 }
