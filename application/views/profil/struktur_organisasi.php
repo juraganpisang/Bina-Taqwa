@@ -13,7 +13,6 @@
     </div>
     <!-- ##### Breadcumb Area End ##### -->
 
-    <!-- ##### Blog Area Start ##### -->
     <div class="blog-area mt-50 section-padding-100">
         <div class="container">
             <div class="row">
@@ -24,7 +23,10 @@
                             <!-- Single Blog Start -->
                             <div class="col-12">
                                 <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
-                                    <img src="url(assets/img/struktur-organisasi.png)">
+                                    <!-- Post Thumb -->
+                                    <div class="blog-post-thumb mb-50">
+                                        <img src="<?= base_url(); ?>assets/img/struktur.png" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>

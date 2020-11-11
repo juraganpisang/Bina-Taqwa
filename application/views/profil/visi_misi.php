@@ -29,7 +29,7 @@
                                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p><br />
                                     <h3 style="text-align:center">Misi</h3>
                                     <p><b>Komitmen kami dari awal :</b></p>
-                                    <ul type="circle">
+                                    <ul style="list-style-type:circle;">
                                         <li>Mempersiapkan calon-calon haji yang berilmu, mandiri, siap mental, kaya spiritual, dan menjiwai rahasia-rahasia haji yang terkandung.</li>
                                         <li>Teguh dalam prinsip akidah yang lurus, jauh dari perilaku syirik, khurafat, dan takhayul.</li>
                                         <li>Istiqamah meneladani Rasulullah SAW dalam semua rangkaian manasik, berusaha mencontoh beliau sedaya kemampuan tanpa sikap mengabaikan dan menyepelekan.</li>
