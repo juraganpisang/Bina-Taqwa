@@ -39,7 +39,7 @@
                     <div class="col-12 h-100">
                         <div class="header-content h-100 d-flex align-items-center justify-content-between">
                             <div class="academy-logo">
-                                <a href="beranda"><img src="<?php echo base_url(); ?>assets/img/logo.png" style="height:75px;" alt=""></a>
+                                <a href="<?= base_url('beranda'); ?>"><img src="<?php echo base_url(); ?>assets/img/logo.png" style="height:75px;" alt=""></a>
                             </div>
                             <!-- <div class="login-content">
                                 <a href="#">Register / Login</a>
@@ -73,7 +73,7 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li><a href="<?= base_url(); ?>beranda"><i class="fas fa-home"></i> Beranda</a></li>
+                                    <li><a href="<?= base_url(); ?>beranda"><i class="fas fa-home"></i> Home</a></li>
                                     <li><a href="#"><i class="fas fa-user"></i> Profil</a>
                                         <ul style="width: 250px;" class="dropdown">
                                             <li><a href="<?= base_url(); ?>profil/tentang_yayasan">Tentang Yayasan</a></li>

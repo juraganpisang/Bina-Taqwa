@@ -4,7 +4,8 @@
             <h2>Berita</h2>
             <nav aria-label="breadcrumb" class="bg-white">
                 <ol class="breadcrumb bg-white">
-                    <li class="breadcrumb-item"><a href="<?= base_url(); ?>beranda">Beranda</a></li>
+                    <li class="breadcrumb-item"><a href="<?= base_url(); ?>beranda">Home</a></li>
+                    <li class="breadcrumb-item">Berita</li>
                     <li class="breadcrumb-item active" aria-current="page">Berita</li>
                 </ol>
             </nav>

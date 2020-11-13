@@ -183,6 +183,7 @@
             <div class="col-12">
                 <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
                     <h3>Lokasi</h3>
+                    <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1APQQ3O49xunXSvWyneWXX4lg-_jxFJLN" width="640" height="480"></iframe>
                 </div>
             </div>
         </div>

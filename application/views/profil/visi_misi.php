@@ -5,7 +5,8 @@
             <h2>Visi & Misi</h2>
             <nav aria-label="breadcrumb" class="bg-white">
                 <ol class="breadcrumb bg-white">
-                    <li class="breadcrumb-item"><a href="<?= base_url(); ?>beranda">Beranda</a></li>
+                    <li class="breadcrumb-item"><a href="<?= base_url(); ?>beranda">Home</a></li>
+                    <li class="breadcrumb-item">Profil</li>
                     <li class="breadcrumb-item active" aria-current="page">Visi & Misi</li>
                 </ol>
             </nav>
@@ -29,23 +30,23 @@
                                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p><br />
                                     <h3 style="text-align:center">Misi</h3>
                                     <p><b>Komitmen kami dari awal :</b></p>
-                                    <ul style="list-style-type:circle;">
+                                    <ul>
                                         <li>Mempersiapkan calon-calon haji yang berilmu, mandiri, siap mental, kaya spiritual, dan menjiwai rahasia-rahasia haji yang terkandung.</li>
                                         <li>Teguh dalam prinsip akidah yang lurus, jauh dari perilaku syirik, khurafat, dan takhayul.</li>
                                         <li>Istiqamah meneladani Rasulullah SAW dalam semua rangkaian manasik, berusaha mencontoh beliau sedaya kemampuan tanpa sikap mengabaikan dan menyepelekan.</li>
                                     </ul><br />
                                     <p><b>Tekad kami :</b></p>
-                                    <ul type="circle">
+                                    <ul>
                                         <li>Mengantar dan membimbing jamaah untuk mencapai haji terbaik, haji yang mabrur yang diridhai Allah SWT.</li>
                                         <li>Melayani setulus hati, penuh tanggung jawab dan persaudaraan.</li>
                                         <li>Berusaha menciptakan kebersamaan, tolong menolong, dan saling meringankan diantara sesama jamaah.</li>
                                     </ul><br />
                                     <p><b>Untuk tujuan mulia itu :</b></p>
-                                    <ul type="circle">
+                                    <ul>
                                         <li>Kami akan melakukan bimbingan yang intensif, fokus dalam memahami semua yang terkait dengan haji, sehingga setiap calon haji benar-benar siap untuk menempuh perjalanan suci yang penuh tantangan ini. Bersikap antisipasi, objektif, sabar dan tawakkal kepada Allah SWT.</li>
                                     </ul><br />
                                     <p><b>Kami akan berusaha maksimal dalam bimbingan dan pelayanan :</b></p>
-                                    <ul type="circle">
+                                    <ul>
                                         <li>Mengutamakan nilai-nilai spiritual ilahiyah adalah target awal kami, namun tidak juga mengabaikan ziarah atsariyah (tour spiritual sejarah) yang akan memperluas dan memperkaya wawasan, guna mengungkapkan keagungan Allah SWT.</li>
                                     </ul><br />
                                 </div>

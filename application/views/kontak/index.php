@@ -18,7 +18,7 @@
                           <div class="col-12 col-lg-5">
                               <div class="contact-information wow fadeInUp" data-wow-delay="400ms">
                                   <div class="section-heading text-center">
-                                      <span class="test"><a href="../Bina-Taqwa-master/beranda" class="test">Home</a> / Kontak Kami</span>
+                                      <span class="test"><a href="<?= base_url() ?>beranda" class="test">Home</a> / Kontak Kami</span>
                                       <!-- <h3>Kontak Kami</h3> -->
 
                                       <h3 class="mt-30">Yayasan Bina Taqwa</h3>

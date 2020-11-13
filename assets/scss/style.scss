@@ -357,9 +357,9 @@ img {
     font-size: 14px;
     line-height: 65px;
     @include transition(all 500ms);
-    background: #61ba6d;
-    background-image: -webkit-linear-gradient(left, #61ba6d 0%, #83c331 51%, #61ba6d 100%);
-    background-image: linear-gradient(to right, #61ba6d 0%, #83c331 51%, #61ba6d 100%);
+    background: #3402FF;
+    background-image: -webkit-linear-gradient(left, #3402FF 0%, #5f37ff 51%, #3402FF 100%);
+    background-image: linear-gradient(to right, #3402FF 0%, #5f37ff 51%, #3402FF 100%);
     font-weight: 600;
     &.btn-sm {
         min-width: 110px;

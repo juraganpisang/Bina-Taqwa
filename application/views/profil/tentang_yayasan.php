@@ -5,7 +5,8 @@
             <h2>Tentang Yayasan</h2>
             <nav aria-label="breadcrumb" class="bg-white">
                 <ol class="breadcrumb bg-white">
-                    <li class="breadcrumb-item"><a href="<?= base_url(); ?>beranda">Beranda</a></li>
+                    <li class="breadcrumb-item"><a href="<?= base_url(); ?>beranda">Home</a></li>
+                    <li class="breadcrumb-item">Profil</li>
                     <li class="breadcrumb-item active" aria-current="page">Tentang Yayasan</li>
                 </ol>
             </nav>
