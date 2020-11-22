@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Profil extends CI_Controller {
+class profil extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,26 +20,38 @@ class Profil extends CI_Controller {
 	 */
 	public function tentang_yayasan()
 	{
+		$category = 4; //cek db
+		$data['data_content'] = $this->admin_model->content($category);
+
         $this->load->view('templates/header');
-		$this->load->view('profil/tentang_yayasan');
+		$this->load->view('profil/tentang_yayasan', $data);
         $this->load->view('templates/footer');
 	}
 	public function visi_misi()
 	{
+		$category = 5; //cek db
+		$data['data_content'] = $this->admin_model->content($category);
+
         $this->load->view('templates/header');
-		$this->load->view('profil/visi_misi');
+		$this->load->view('profil/visi_misi', $data);
         $this->load->view('templates/footer');
 	}
 	public function struktur_organisasi()
 	{
+		$category = 6; //cek db
+		$data['data_content'] = $this->admin_model->content($category);
+
         $this->load->view('templates/header');
-		$this->load->view('profil/struktur_organisasi');
+		$this->load->view('profil/struktur_organisasi', $data);
         $this->load->view('templates/footer');
 	}
 	public function informasi_donatur()
 	{
+		$category = 7; //cek db
+		$data['data_content'] = $this->admin_model->content($category);
+
         $this->load->view('templates/header');
-		$this->load->view('profil/informasi_donatur');
+		$this->load->view('profil/informasi_donatur', $data);
         $this->load->view('templates/footer');
 	}
 }

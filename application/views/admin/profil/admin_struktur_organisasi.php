@@ -1,21 +1,23 @@
 <!-- ##### Breadcumb Area Start ##### -->
 <div class="breadcumb-area bg-img margin-slide" style="background-image: url(<?php echo base_url(); ?>assets/img/bg-img/breadcumb.jpg);">
     <div class="bradcumbContent">
-        <h2>Informasi Donatur</h2>
+        <h2>Struktur Organisasi</h2>
         <nav aria-label="breadcrumb" class="bg-white">
             <ol class="breadcrumb bg-white">
                 <li class="breadcrumb-item"><a href="<?= base_url(); ?>beranda">Home</a></li>
                 <li class="breadcrumb-item">Profil</li>
-                <li class="breadcrumb-item active" aria-current="page">Informasi Donatur</li>
+                <li class="breadcrumb-item active" aria-current="page">Struktur Organisasi</li>
             </ol>
         </nav>
     </div>
 </div>
 <!-- ##### Breadcumb Area End ##### -->
 
-<!-- ##### Blog Area Start ##### -->
 <div class="blog-area mt-50 section-padding-100">
     <div class="container">
+
+    <?= $this->session->flashdata('message'); ?>
+
         <div class="row">
             <div class="col-12 col-md-8">
                 <div class="academy-blog-posts">
@@ -25,10 +27,27 @@
                         <div class="col-12">
                             <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
 
-                                <div class="">
+                                <!-- HASIL DISINI -->
+                                <div style="display: flow-root;">
+                                    <div id="edit" class="pull-right" data-toggle="tooltip" data-placement="bottom" title="Klik untuk Edit">
+                                        <i class="fas fa-edit fa-2x text-primary"></i> <!-- UNTUK EDIT -->
+                                    </div>
+                                    <div id="batal" class="pull-right" data-toggle="tooltip" data-placement="bottom" title="Klik untuk Batal">
+                                        <i class="fas fa-times-circle fa-2x text-danger"></i> <!-- UNTUK BATAL -->
+                                    </div>
+                                </div>
+                                <div class="mt-2 content_show">
                                     <?= $data_content['content']; ?>
                                 </div>
-                                
+                                <div class="mt-2 content_edit">
+                                    <?= form_open_multipart('admin/do_update/'.$data_content["category"]) ?>
+                                    <input type="hidden" value="<?= $data_content['id_content']; ?>" name="id_content">
+                                    <textarea name="content" id="content"><?= $data_content['content']; ?></textarea>
+                                    <?= form_submit('submit', 'Submit Post', 'class = "btn btn-primary mt-2"'); ?>
+                                    <?= form_close(); ?>
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
