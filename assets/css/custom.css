@@ -19,18 +19,19 @@
 }
 
 .margin-slide {
-	margin-top: 35px!important;
+	margin-top: 35px !important;
 }
 
-ul li{
-	list-style-type: disc!important;
+ul li {
+	list-style-type: disc !important;
 }
 
 hr {
-	margin-top: 0px!important;
+	margin-top: 0px !important;
 }
+
 h3 {
-	margin-bottom: 0px!important;
+	margin-bottom: 0px !important;
 }
 
 @media only screen and (max-width: 767px) {

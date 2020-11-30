@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class program extends CI_Controller {
+class program extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -20,14 +21,38 @@ class program extends CI_Controller {
 	 */
 	public function manasik_haji()
 	{
-        $this->load->view('templates/header');
+		$category = 1; //get data header 1
+		$data_header_1['data_content_header_1'] = $this->admin_model->content($category);
+
+		$category = 2; //get data header 2
+		$data_header_2['data_content_header_2'] = $this->admin_model->content($category);
+
+		$category = 3; //get data footer
+		$data_footer['data_content_footer'] = $this->admin_model->content($category);		
+
+		$data_header['data_header_1'] = $data_header_1['data_content_header_1'];
+		$data_header['data_header_2'] = $data_header_2['data_content_header_2'];
+
+		$this->load->view('templates/header', $data_header);
 		$this->load->view('Program/manasik_haji');
-        $this->load->view('templates/footer');
+		$this->load->view('templates/footer', $data_footer);
 	}
 	public function kegiatan_dakwah()
 	{
-        $this->load->view('templates/header');
+		$category = 1; //get data header 1
+		$data_header_1['data_content_header_1'] = $this->admin_model->content($category);
+
+		$category = 2; //get data header 2
+		$data_header_2['data_content_header_2'] = $this->admin_model->content($category);
+
+		$category = 3; //get data footer
+		$data_footer['data_content_footer'] = $this->admin_model->content($category);		
+
+		$data_header['data_header_1'] = $data_header_1['data_content_header_1'];
+		$data_header['data_header_2'] = $data_header_2['data_content_header_2'];
+
+		$this->load->view('templates/header', $data_header);
 		$this->load->view('Program/kegiatan_dakwah');
-        $this->load->view('templates/footer');
+		$this->load->view('templates/footer', $data_footer);
 	}
 }

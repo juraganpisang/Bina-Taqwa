@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class profil extends CI_Controller {
+class profil extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -20,38 +21,86 @@ class profil extends CI_Controller {
 	 */
 	public function tentang_yayasan()
 	{
-		$category = 4; //cek db
-		$data['data_content'] = $this->admin_model->content($category);
-
-        $this->load->view('templates/header');
-		$this->load->view('profil/tentang_yayasan', $data);
-        $this->load->view('templates/footer');
-	}
-	public function visi_misi()
-	{
 		$category = 5; //cek db
 		$data['data_content'] = $this->admin_model->content($category);
 
-        $this->load->view('templates/header');
-		$this->load->view('profil/visi_misi', $data);
-        $this->load->view('templates/footer');
+		$category = 1; //get data header 1
+		$data_header_1['data_content_header_1'] = $this->admin_model->content($category);
+
+		$category = 2; //get data header 2
+		$data_header_2['data_content_header_2'] = $this->admin_model->content($category);
+
+		$category = 3; //get data footer
+		$data_footer['data_content_footer'] = $this->admin_model->content($category);		
+
+		$data_header['data_header_1'] = $data_header_1['data_content_header_1'];
+		$data_header['data_header_2'] = $data_header_2['data_content_header_2'];
+
+		$this->load->view('templates/header', $data_header);
+		$this->load->view('profil/tentang_yayasan', $data);
+		$this->load->view('templates/footer', $data_footer);
 	}
-	public function struktur_organisasi()
+	public function visi_misi()
 	{
 		$category = 6; //cek db
 		$data['data_content'] = $this->admin_model->content($category);
 
-        $this->load->view('templates/header');
-		$this->load->view('profil/struktur_organisasi', $data);
-        $this->load->view('templates/footer');
+		$category = 1; //get data header 1
+		$data_header_1['data_content_header_1'] = $this->admin_model->content($category);
+
+		$category = 2; //get data header 2
+		$data_header_2['data_content_header_2'] = $this->admin_model->content($category);
+
+		$category = 3; //get data footer
+		$data_footer['data_content_footer'] = $this->admin_model->content($category);		
+
+		$data_header['data_header_1'] = $data_header_1['data_content_header_1'];
+		$data_header['data_header_2'] = $data_header_2['data_content_header_2'];
+
+		$this->load->view('templates/header', $data_header);
+		$this->load->view('profil/visi_misi', $data);
+		$this->load->view('templates/footer', $data_footer);
 	}
-	public function informasi_donatur()
+	public function struktur_organisasi()
 	{
 		$category = 7; //cek db
 		$data['data_content'] = $this->admin_model->content($category);
 
-        $this->load->view('templates/header');
+		$category = 1; //get data header 1
+		$data_header_1['data_content_header_1'] = $this->admin_model->content($category);
+
+		$category = 2; //get data header 2
+		$data_header_2['data_content_header_2'] = $this->admin_model->content($category);
+
+		$category = 3; //get data footer
+		$data_footer['data_content_footer'] = $this->admin_model->content($category);		
+
+		$data_header['data_header_1'] = $data_header_1['data_content_header_1'];
+		$data_header['data_header_2'] = $data_header_2['data_content_header_2'];
+
+		$this->load->view('templates/header', $data_header);
+		$this->load->view('profil/struktur_organisasi', $data);
+		$this->load->view('templates/footer', $data_footer);
+	}
+	public function informasi_donatur()
+	{
+		$category = 8; //cek db
+		$data['data_content'] = $this->admin_model->content($category);
+
+		$category = 1; //get data header 1
+		$data_header_1['data_content_header_1'] = $this->admin_model->content($category);
+
+		$category = 2; //get data header 2
+		$data_header_2['data_content_header_2'] = $this->admin_model->content($category);
+
+		$category = 3; //get data footer
+		$data_footer['data_content_footer'] = $this->admin_model->content($category);		
+
+		$data_header['data_header_1'] = $data_header_1['data_content_header_1'];
+		$data_header['data_header_2'] = $data_header_2['data_content_header_2'];
+
+		$this->load->view('templates/header', $data_header);
 		$this->load->view('profil/informasi_donatur', $data);
-        $this->load->view('templates/footer');
+		$this->load->view('templates/footer', $data_footer);
 	}
 }

@@ -38,12 +38,7 @@
                 <div class="row h-100">
                     <div class="col-12 h-100">
                         <div class="header-content h-100 d-flex align-items-center justify-content-between">
-                            <div class="academy-logo">
-                                <a href="<?= base_url('beranda'); ?>"><img src="<?php echo base_url(); ?>assets/img/logo.png" style="height:75px;" alt=""></a>
-                            </div>
-                            <!-- <div class="login-content">
-                                <a href="#">Register / Login</a>
-                            </div> -->
+                            <?= $data_header_1['content'] ?>
                         </div>
                     </div>
                 </div>
@@ -98,7 +93,7 @@
                         <!-- Calling Info -->
                         <div class="calling-info">
                             <div class="call-center">
-                                <a href="tel:+654563325568889"><i class="fas fa-phone-square-alt"></i> <span>(+65) 456 332 5568 889</span></a>
+                                <a href="tel:<?= $data_header_2['content']; ?>"><i class="fas fa-phone-square-alt"></i> <span><?= $data_header_2['content']; ?></span></a>
                             </div>
                         </div>
                     </nav>

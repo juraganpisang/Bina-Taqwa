@@ -41,7 +41,7 @@
                                     <?= $data_content['content']; ?>
                                 </div>
                                 <div class="mt-2 content_edit">
-                                    <?= form_open_multipart('admin/do_visi_misi/'.$data_content["category"]) ?>
+                                    <?= form_open_multipart('admin/do_update/'.$data_content["category"]) ?>
                                     <input type="hidden" value="<?= $data_content['id_content']; ?>" name="id_content">
                                     <textarea name="content" id="content"><?= $data_content['content']; ?></textarea>
                                     <?= form_submit('submit', 'Submit Post', 'class = "btn btn-primary mt-2"'); ?>

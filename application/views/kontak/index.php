@@ -8,7 +8,7 @@
 
   <!-- ##### Contact Area Start ##### -->
   <!-- <section class="contact-area margin-kontak-area-1"> -->
-    <div class="blog-area mt-50 section-padding-100">
+  <div class="blog-area mt-50 section-padding-100">
       <div class="container">
           <div class="row">
               <div class="col-12">
@@ -18,16 +18,10 @@
                           <div class="col-12 col-lg-5">
                               <div class="contact-information wow fadeInUp" data-wow-delay="400ms">
                                   <div class="section-heading text-center">
-                                      <span class="test"><a href="<?= base_url() ?>beranda" class="test">Home</a> / Kontak Kami</span>
-                                      <!-- <h3>Kontak Kami</h3> -->
 
-                                      <h3 class="mt-30">Yayasan Bina Taqwa</h3>
-
-                                      <p>Sekretariat: Jl. Mertojoyo F/3 Merjosari Malang<br>Telp : (0341) 463661 - 553831</p>
-                                      <!-- <div class="test"><a href="" class="test">tes</a></div> -->
-                                      <h3>KRITIK, SARAN & PERTANYAAN</h3>
-
-                                      <p style="margin-bottom: -40px;">Silahkan isi form di samping untuk memberi Kritik & Saran maupun ada Pertanyaan yang akan di berikan kepada kami.<br>Kami akan segera merespon pesan anda.</p>
+                                      <div class="">
+                                          <?= $data_content['content']; ?>
+                                      </div>
 
                                   </div>
 
@@ -101,4 +95,4 @@
               </div>
           </div>
       </div>
-    </div>
+  </div>

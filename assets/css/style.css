@@ -24,7 +24,12 @@ body {
 	font-size: 14px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	color: #242424;
 	line-height: 1.3;
 	font-weight: 700;
@@ -41,7 +46,9 @@ breadcrumb {
 	color: #eef3f6;
 }
 
-a, a:hover, a:focus {
+a,
+a:hover,
+a:focus {
 	-webkit-transition-duration: 500ms;
 	transition-duration: 500ms;
 	text-decoration: none;
@@ -51,11 +58,13 @@ a, a:hover, a:focus {
 	font-size: 14px;
 }
 
-ul, ol {
+ul,
+ol {
 	margin: 0;
 }
 
-ul li, ol li {
+ul li,
+ol li {
 	list-style: none;
 }
 
@@ -202,6 +211,7 @@ img {
 	.section-heading h3 {
 		font-size: 24px;
 	}
+
 	/* .test {
 		font-size: 240px;
 	} */
@@ -211,7 +221,8 @@ img {
 	text-align: left !important;
 }
 
-.section-heading.white span, .section-heading.white h3 {
+.section-heading.white span,
+.section-heading.white h3 {
 	color: #ffffff;
 }
 
@@ -306,7 +317,8 @@ img {
 	content: "";
 }
 
-.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
 	color: #ffffff;
 	right: 0;
 	padding-right: 0;
@@ -321,7 +333,9 @@ img {
 }
 
 @media only screen and (max-width: 767px) {
-	.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
+
+	.mfp-image-holder .mfp-close,
+	.mfp-iframe-holder .mfp-close {
 		right: 0;
 	}
 }
@@ -384,7 +398,9 @@ img {
 	line-height: 42px;
 }
 
-.academy-btn.active, .academy-btn:hover, .academy-btn:focus {
+.academy-btn.active,
+.academy-btn:hover,
+.academy-btn:focus {
 	font-size: 14px;
 	font-weight: 600;
 	color: #ffffff;
@@ -397,7 +413,8 @@ img {
 	background: #141414;
 }
 
-.academy-btn.btn-2:hover, .academy-btn.btn-2:focus {
+.academy-btn.btn-2:hover,
+.academy-btn.btn-2:focus {
 	background: #5c46b6;
 }
 
@@ -405,7 +422,8 @@ img {
 	background: #5c46b6;
 }
 
-.academy-btn.btn-3:hover, .academy-btn.btn-3:focus {
+.academy-btn.btn-3:hover,
+.academy-btn.btn-3:focus {
 	background: #141414;
 }
 
@@ -415,7 +433,8 @@ img {
 	color: #606060;
 }
 
-.academy-btn.btn-4:hover, .academy-btn.btn-4:focus {
+.academy-btn.btn-4:hover,
+.academy-btn.btn-4:focus {
 	background: #5c46b6;
 	color: #ffffff;
 }
@@ -483,7 +502,8 @@ img {
 	text-transform: uppercase;
 }
 
-.header-area .academy-main-menu .classy-navbar .classynav ul li a:hover, .header-area .academy-main-menu .classy-navbar .classynav ul li a:focus {
+.header-area .academy-main-menu .classy-navbar .classynav ul li a:hover,
+.header-area .academy-main-menu .classy-navbar .classynav ul li a:focus {
 	color: #5c46b6;
 }
 
@@ -675,7 +695,8 @@ img {
 	}
 }
 
-.hero-slides .owl-prev, .hero-slides .owl-next {
+.hero-slides .owl-prev,
+.hero-slides .owl-next {
 	background: #3402FF;
 	background: -webkit-linear-gradient(to right, #3402FF, #5f37ff);
 	background: linear-gradient(to right, #3402FF, #5f37ff);
@@ -698,7 +719,9 @@ img {
 }
 
 @media only screen and (max-width: 767px) {
-	.hero-slides .owl-prev, .hero-slides .owl-next {
+
+	.hero-slides .owl-prev,
+	.hero-slides .owl-next {
 		width: 40px;
 		height: 40px;
 		line-height: 40px;
@@ -706,7 +729,10 @@ img {
 	}
 }
 
-.hero-slides .owl-prev:hover, .hero-slides .owl-prev:focus, .hero-slides .owl-next:hover, .hero-slides .owl-next:focus {
+.hero-slides .owl-prev:hover,
+.hero-slides .owl-prev:focus,
+.hero-slides .owl-next:hover,
+.hero-slides .owl-next:focus {
 	background: #141414;
 	color: #ffffff;
 }
@@ -716,7 +742,8 @@ img {
 	right: 5%;
 }
 
-.hero-slides:hover .owl-prev, .hero-slides:hover .owl-next {
+.hero-slides:hover .owl-prev,
+.hero-slides:hover .owl-next {
 	opacity: 1;
 	visibility: visible;
 }
@@ -853,7 +880,8 @@ img {
 	margin-bottom: 0;
 }
 
-.single-course-area:hover .course-content h4, .single-course-area:focus .course-content h4 {
+.single-course-area:hover .course-content h4,
+.single-course-area:focus .course-content h4 {
 	color: #5c46b6;
 }
 
@@ -1177,7 +1205,8 @@ img {
 	margin-right: 15px;
 }
 
-.main-footer-area .footer-widget .footer-social-info a:hover, .main-footer-area .footer-widget .footer-social-info a:focus {
+.main-footer-area .footer-widget .footer-social-info a:hover,
+.main-footer-area .footer-widget .footer-social-info a:focus {
 	color: #ffffff;
 }
 
@@ -1189,7 +1218,8 @@ img {
 	font-weight: 500;
 }
 
-.main-footer-area .footer-widget .useful-links li a:hover, .main-footer-area .footer-widget .useful-links li a:focus {
+.main-footer-area .footer-widget .useful-links li a:hover,
+.main-footer-area .footer-widget .useful-links li a:focus {
 	color: #5c46b6;
 }
 
@@ -1297,7 +1327,8 @@ img {
 	z-index: 1;
 }
 
-.about-slides .owl-prev, .about-slides .owl-next {
+.about-slides .owl-prev,
+.about-slides .owl-next {
 	background: #3402FF;
 	background: -webkit-linear-gradient(to right, #3402FF, #5f37ff);
 	background: linear-gradient(to right, #3402FF, #5f37ff);
@@ -1318,7 +1349,9 @@ img {
 }
 
 @media only screen and (max-width: 767px) {
-	.about-slides .owl-prev, .about-slides .owl-next {
+
+	.about-slides .owl-prev,
+	.about-slides .owl-next {
 		width: 36px;
 		height: 36px;
 		line-height: 36px;
@@ -1368,7 +1401,8 @@ img {
 	margin-bottom: 5px;
 }
 
-.single-blog-post .post-title:hover, .single-blog-post .post-title:focus {
+.single-blog-post .post-title:hover,
+.single-blog-post .post-title:focus {
 	color: #5c46b6;
 }
 
@@ -1403,7 +1437,8 @@ img {
 	line-height: 36px;
 }
 
-.academy-pagination-area .pagination .page-item .page-link:hover, .academy-pagination-area .pagination .page-item .page-link:focus {
+.academy-pagination-area .pagination .page-item .page-link:hover,
+.academy-pagination-area .pagination .page-item .page-link:focus {
 	background-color: #3402FF;
 	color: #ffffff;
 }
@@ -1473,7 +1508,8 @@ img {
 	display: block;
 }
 
-.blog-post-categories ul li a:hover, .blog-post-categories ul li a:focus {
+.blog-post-categories ul li a:hover,
+.blog-post-categories ul li a:focus {
 	color: #5c46b6;
 }
 
@@ -1507,7 +1543,8 @@ img {
 	}
 }
 
-.latest-blog-posts .latest-blog-post-content .post-title h6:hover, .latest-blog-posts .latest-blog-post-content .post-title h6:focus {
+.latest-blog-posts .latest-blog-post-content .post-title h6:hover,
+.latest-blog-posts .latest-blog-post-content .post-title h6:focus {
 	color: #5c46b6;
 }
 

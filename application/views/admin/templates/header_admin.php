@@ -18,11 +18,13 @@
 
     <!-- //TEXT EDITOR -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-    
+
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
     <!-- Custom dari Tim Stiki, boleh edit css disini saja -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/custom.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 
 <body>
@@ -40,12 +42,15 @@
                 <div class="row h-100">
                     <div class="col-12 h-100">
                         <div class="header-content h-100 d-flex align-items-center justify-content-between">
-                            <div class="academy-logo">
-                                <a href="<?= base_url('admin/beranda'); ?>"><img src="<?php echo base_url(); ?>assets/img/logo.png" style="height:75px;" alt=""></a>
-                            </div>
-                            <!-- <div class="login-content">
-                                <a href="#">Register / Login</a>
-                            </div> -->
+                            <?php if ($data_header_1['content'] == '') {?>
+                                <?= '&nbsp;'; ?>
+                            <?php }else { ?>
+                                <?= $data_header_1['content'] ?>
+                            <?php } ?>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editHeader">
+                                Edit Header
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -56,6 +61,7 @@
         <div class="academy-main-menu">
             <div class="classy-nav-container breakpoint-off">
                 <div class="container">
+
                     <!-- Menu -->
                     <nav class="classy-navbar justify-content-between" id="academyNav">
 
@@ -91,20 +97,42 @@
                                             <li><a href="<?= base_url(); ?>admin/kegiatan_dakwah">Kegiatan Dakwah</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="<?= base_url(); ?>admin/kontak"><i class="fas fa-phone-alt"></i> Kontak Kami</a></li>
+                                    <li><a href="<?= base_url(); ?>admin/kontak_kami"><i class="fas fa-phone-alt"></i> Kontak Kami</a></li>
                                     <li><a href="<?= base_url(); ?>admin/logout" class="text-danger"><i class="fas fa-sign-out-alt"></i> Keluar </a></li>
+                                    <!-- <li></li> -->
                                 </ul>
+
+                                <div class="row mt-3 ml-1">
+                                    <div class="form-group">
+                                        <?= form_open_multipart('admin/do_update/' . $data_content['category']) ?>
+                                        <input type="hidden" value="<?= $data_header_2['id_content']; ?>" name="id_content">
+                                        <input type="text" name="content" class="form-control" id="content_header_2" placeholder="Cth: 08125432112" maxlength="15" value="">
+                                        <?= form_submit('submit', 'Edit Kontak', 'class = "btn btn-primary mt-1"', 'style = "background-color: #000000"'); ?>
+                                        <?= form_close(); ?>
+                                    </div>
+
+                                </div>
+
                             </div>
                             <!-- Nav End -->
+
                         </div>
 
                         <!-- Calling Info -->
-                        <div class="calling-info">
+                        <div class="calling-info ml-5">
                             <div class="call-center">
-                                <a href="tel:+654563325568889"><i class="fas fa-phone-square-alt"></i> <span>(+65) 456 332 5568 889</span></a>
+                                <a href="tel:+654563325568889">
+                                    <!-- <i class="fas fa-phone"></i> -->
+                                    <!-- <span> -->
+                                    <?= $data_header_2['content']; ?>
+                                    <!-- </span> -->
+
+                                </a>
                             </div>
                         </div>
+
                     </nav>
+
                 </div>
             </div>
         </div>
