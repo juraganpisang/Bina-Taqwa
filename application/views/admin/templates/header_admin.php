@@ -80,7 +80,7 @@
 
                             <!-- Nav Start -->
                             <div class="classynav">
-                                <ul>
+                                <ul style="margin:0;">
                                     <li><a href="<?= base_url(); ?>admin/beranda"><i class="fas fa-home"></i> Home</a></li>
                                     <li><a href="#"><i class="fas fa-user"></i> Profil</a>
                                         <ul style="width: 250px;" class="dropdown">
@@ -110,7 +110,6 @@
                                         <?= form_submit('submit', 'Edit Kontak', 'class = "btn btn-primary mt-1"', 'style = "background-color: #000000"'); ?>
                                         <?= form_close(); ?>
                                     </div>
-
                                 </div>
 
                             </div>
@@ -119,14 +118,13 @@
                         </div>
 
                         <!-- Calling Info -->
-                        <div class="calling-info ml-5">
+                        <div class="calling-info">
                             <div class="call-center">
-                                <a href="tel:+654563325568889">
-                                    <!-- <i class="fas fa-phone"></i> -->
-                                    <!-- <span> -->
+                                <a href="tel: <?= $data_header_2['content']; ?>">
+                                <!-- <i class="fas fa-phone-square-alt"></i>  -->
+                                    <span>
                                     <?= $data_header_2['content']; ?>
-                                    <!-- </span> -->
-
+                                    </span>
                                 </a>
                             </div>
                         </div>

@@ -58,13 +58,11 @@ a:focus {
 	font-size: 14px;
 }
 
-ul,
-ol {
+ul,ol {
 	margin: 0;
 }
 
-ul li,
-ol li {
+ul li,ol li {
 	list-style: none;
 }
 
