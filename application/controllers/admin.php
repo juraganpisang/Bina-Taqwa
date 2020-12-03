@@ -280,6 +280,9 @@ class admin extends CI_Controller
 		$category = 3; //get data footer
 		$data_footer['data_content_footer'] = $this->admin_model->content($category);
 
+		$category = 12; //get data Email
+		$data['data_content_email'] = $this->admin_model->content($category);
+
 		//Set all data Header and Content to data_header
 		$data_header['data_content'] = $data['data_content'];
 		$data_header['data_header_1'] = $data_header_1['data_content_header_1'];
