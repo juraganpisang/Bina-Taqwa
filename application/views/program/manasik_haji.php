@@ -22,11 +22,11 @@
                     <div class="row">
                         <!-- Single Blog Start -->
                         <div class="col-12">
-
+                            <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
                                 <div class="">
                                     <?= $data_content['content']; ?>
                                 </div>
-                                
+                            </div>
                         </div>
                     </div>
                 </div>

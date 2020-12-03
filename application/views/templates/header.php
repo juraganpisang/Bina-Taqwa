@@ -38,7 +38,9 @@
                 <div class="row h-100">
                     <div class="col-12 h-100">
                         <div class="header-content h-100 d-flex align-items-center justify-content-between">
-                            <?= $data_header_1['content'] ?>
+
+                            <a href="<?= base_url('beranda') ?>"><?= $data_header_1['content'] ?></a>
+
                         </div>
                     </div>
                 </div>

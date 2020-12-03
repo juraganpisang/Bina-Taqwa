@@ -42,9 +42,9 @@
                 <div class="row h-100">
                     <div class="col-12 h-100">
                         <div class="header-content h-100 d-flex align-items-center justify-content-between">
-                            <?php if ($data_header_1['content'] == '') {?>
+                            <?php if ($data_header_1['content'] == '') { ?>
                                 <?= '&nbsp;'; ?>
-                            <?php }else { ?>
+                            <?php } else { ?>
                                 <?= $data_header_1['content'] ?>
                             <?php } ?>
                             <!-- Button trigger modal -->
@@ -121,9 +121,9 @@
                         <div class="calling-info">
                             <div class="call-center">
                                 <a href="tel: <?= $data_header_2['content']; ?>">
-                                <!-- <i class="fas fa-phone-square-alt"></i>  -->
+                                    <!-- <i class="fas fa-phone-square-alt"></i>  -->
                                     <span>
-                                    <?= $data_header_2['content']; ?>
+                                        <?= $data_header_2['content']; ?>
                                     </span>
                                 </a>
                             </div>

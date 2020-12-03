@@ -53,24 +53,30 @@
                     <div class="row no-gutters">
                         <!-- Single Top Features -->
                         <div class="col-12 col-md-4">
-                            <div class="single-top-features d-flex align-items-center justify-content-center">
-                                <i class="icon-agenda-1"></i>
-                                <h5>Visi dan Misi</h5>
-                            </div>
+                            <a href="<?= base_url('profil/visi_misi') ?>">
+                                <div class="single-top-features d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-calendar-week fa-2x mr-2" style="color:white;"></i>
+                                    <h5>Visi dan Misi</h5>
+                                </div>
+                            </a>
                         </div>
                         <!-- Single Top Features -->
                         <div class="col-12 col-md-4">
-                            <div class="single-top-features d-flex align-items-center justify-content-center">
-                                <i class="icon-assistance"></i>
-                                <h5>Program</h5>
-                            </div>
+                            <a href="<?= base_url('program/manasik_haji') ?>">
+                                <div class="single-top-features d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-suitcase fa-2x mr-2" style="color:white;"></i>
+                                    <h5>Program</h5>
+                                </div>
+                            </a>
                         </div>
                         <!-- Single Top Features -->
                         <div class="col-12 col-md-4">
-                            <div class="single-top-features d-flex align-items-center justify-content-center">
-                                <i class="icon-telephone-3"></i>
-                                <h5>Kontak</h5>
-                            </div>
+                            <a href="<?= base_url('kontak') ?>">
+                                <div class="single-top-features d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-address-card fa-2x mr-2" style="color:white;"></i>
+                                    <h5>Kontak</h5>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
