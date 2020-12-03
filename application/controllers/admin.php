@@ -206,6 +206,62 @@ class admin extends CI_Controller
 		$this->load->view('admin/templates/footer_admin', $data_footer, $data['data_content']);
 	}
 
+	public function manasik_haji()
+	{
+		if (!$this->session->has_userdata('logged_in')) {
+			redirect(base_url('beranda'));
+		}
+
+		$category = 9; //cek db
+		$data['data_content'] = $this->admin_model->content($category);
+
+		$category = 1; //get data Header 1
+		$data_header_1['data_content_header_1'] = $this->admin_model->content($category);
+
+		$category = 2; //get data Header 2
+		$data_header_2['data_content_header_2'] = $this->admin_model->content($category);
+
+		$category = 3; //get data footer
+		$data_footer['data_content_footer'] = $this->admin_model->content($category);
+
+		//Set all data Header and Content to data_header
+		$data_header['data_content'] = $data['data_content'];
+		$data_header['data_header_1'] = $data_header_1['data_content_header_1'];
+		$data_header['data_header_2'] = $data_header_2['data_content_header_2'];
+
+		$this->load->view('admin/templates/header_admin', $data_header);
+		$this->load->view('admin/program/admin_manasik_haji', $data);
+		$this->load->view('admin/templates/footer_admin', $data_footer);
+	}
+
+	public function kegiatan_dakwah()
+	{
+		if (!$this->session->has_userdata('logged_in')) {
+			redirect(base_url('beranda'));
+		}
+
+		$category = 10; //cek db
+		$data['data_content'] = $this->admin_model->content($category);
+
+		$category = 1; //get data Header 1
+		$data_header_1['data_content_header_1'] = $this->admin_model->content($category);
+
+		$category = 2; //get data Header 2
+		$data_header_2['data_content_header_2'] = $this->admin_model->content($category);
+
+		$category = 3; //get data footer
+		$data_footer['data_content_footer'] = $this->admin_model->content($category);
+
+		//Set all data Header and Content to data_header
+		$data_header['data_content'] = $data['data_content'];
+		$data_header['data_header_1'] = $data_header_1['data_content_header_1'];
+		$data_header['data_header_2'] = $data_header_2['data_content_header_2'];
+
+		$this->load->view('admin/templates/header_admin', $data_header);
+		$this->load->view('admin/program/admin_kegiatan_dakwah', $data);
+		$this->load->view('admin/templates/footer_admin', $data_footer);
+	}
+
 	public function kontak_kami()
 	{
 		if (!$this->session->has_userdata('logged_in')) {

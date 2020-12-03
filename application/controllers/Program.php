@@ -21,6 +21,9 @@ class program extends CI_Controller
 	 */
 	public function manasik_haji()
 	{
+		$category = 9; //cek db
+		$data['data_content'] = $this->admin_model->content($category);
+
 		$category = 1; //get data header 1
 		$data_header_1['data_content_header_1'] = $this->admin_model->content($category);
 
@@ -34,11 +37,14 @@ class program extends CI_Controller
 		$data_header['data_header_2'] = $data_header_2['data_content_header_2'];
 
 		$this->load->view('templates/header', $data_header);
-		$this->load->view('Program/manasik_haji');
+		$this->load->view('program/manasik_haji', $data);
 		$this->load->view('templates/footer', $data_footer);
 	}
 	public function kegiatan_dakwah()
 	{
+		$category = 10; //cek db
+		$data['data_content'] = $this->admin_model->content($category);
+
 		$category = 1; //get data header 1
 		$data_header_1['data_content_header_1'] = $this->admin_model->content($category);
 
@@ -52,7 +58,7 @@ class program extends CI_Controller
 		$data_header['data_header_2'] = $data_header_2['data_content_header_2'];
 
 		$this->load->view('templates/header', $data_header);
-		$this->load->view('Program/kegiatan_dakwah');
+		$this->load->view('program/kegiatan_dakwah', $data);
 		$this->load->view('templates/footer', $data_footer);
 	}
 }
