@@ -49,34 +49,21 @@
                          <!-- Contact Form Area -->
                          <div class="col-12 col-lg-7">
                              <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
-                                 <form action="#" method="post">
-                                     <div class="row">
-                                         <div class="col-6">
-                                             <div class="form-group">
-                                                 <label for="nama_depan">Nama Depan</label>
-                                                 <input type="text" name="nama_depan" class="form-control" id="nama_depan" placeholder="Cth: Muhammad">
-                                             </div>
-                                         </div>
-                                         <div class="col-6">
-                                             <div class="form-group">
-                                                 <label for="nama_belakang">Nama Belakang</label>
-                                                 <input type="text" name="nama_belakang" class="form-control" id="nama_belakang" placeholder="Cth: Iqbal">
-                                             </div>
-                                         </div>
+                                 <?= form_open_multipart('admin/do_update/' . $data_content['category']) ?>
+                                 <div class="form-group">
+                                     <input type="hidden" value="<?= $data_content_email['id_content']; ?>" name="id_content">
+                                     <div class="alert alert-info">
+                                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="ion-ios-close-empty"></i></button>
+                                         <i class="fa fa-lightbulb"></i>&ensp;<span style="font-size: 11px; text-transform: uppercase">Email ini akan menerima pesan dari user untuk di konfirmasi lebih lanjut</span>
                                      </div>
-                                     <div class="form-group">
-                                         <label for="alamat">Alamat</label>
-                                         <input type="text" name="alamat" class="form-control" id="alamat" placeholder="Masukkan Alamat">
-                                     </div>
-                                     <div class="form-group">
-                                         <label for="kritik">Kritik, Saran, dan Pertanyaan</label>
-                                         <textarea class="form-control" name="kritik" id="kritik" cols="30" rows="10" placeholder="Masukkan Kritik, Saran, dan Pertanyaan"></textarea>
-                                         <!-- <input type="text" name="kritik" class="form-control" id="kritik" placeholder="Masukkan Alamat"> -->
-                                     </div>
-                                     <div class="text-center">
-                                         <button class="btn academy-btn mt-30" type="submit">Kontak Kami</button>
-                                     </div>
-                                 </form>
+                                     <label for="nama_depan">Your Email : </label>
+                                     <?= $data_content_email['content']; ?>
+                                     <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="content" class="form-control" id="content" placeholder="Edit Email" required>
+                                 </div>
+                                 <div>
+                                     <?= form_submit('submit', 'Submit', 'class = "btn btn-primary mt-1"', 'style = "background-color: #000000"'); ?>
+                                 </div>
+                                 <?= form_close(); ?>
                              </div>
                          </div>
                      </div>

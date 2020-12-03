@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2020 at 08:46 AM
+-- Generation Time: Dec 03, 2020 at 02:32 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -47,7 +47,8 @@ INSERT INTO `category` (`id_category`, `category`) VALUES
 (8, 'informasi_donatur'),
 (9, 'manasik_haji'),
 (10, 'kegiatan_dakwah'),
-(11, 'kontak_kami');
+(11, 'kontak_kami'),
+(12, 'email');
 
 -- --------------------------------------------------------
 
@@ -89,11 +90,11 @@ INSERT INTO `content` (`id_content`, `content`, `category_id`, `last_update_at`)
 (5, 'asdasd', 9, '2020-11-22 11:23:47'),
 (6, 'asd', 10, '2020-11-22 11:23:47'),
 (7, '<p>dsasda</p>', 11, '2020-11-22 11:23:47'),
-(8, 'asdsad', 12, '2020-11-22 11:23:47'),
-(9, '<p>sadadsadasdasda</p>', 1, '2020-11-22 11:23:47'),
+(8, 'salem.stefanus9@gmail.com', 12, '2020-11-22 11:23:47'),
+(9, '<p>dsadaadassda</p>', 1, '2020-11-22 11:23:47'),
 (10, '<p><span style=\"color: rgb(96, 96, 96); font-family: Montserrat, sans-serif; font-size: 12px; background-color: rgb(20, 20, 20);\">Copyright ©</span><span style=\"color: rgb(96, 96, 96); font-family: Montserrat, sans-serif; font-size: 12px; background-color: rgb(20, 20, 20);\">2020 Yayasan Bina Taqwa 2020. All Rights Reserved.</span></p>', 3, '2020-11-22 11:23:47'),
 (11, '<span style=\"font-family: Montserrat, sans-serif; color: rgb(96, 96, 96); font-size: 12px; background-color: rgb(20, 20, 20);\">Copyright ©</span><span style=\"font-family: Montserrat, sans-serif; color: rgb(96, 96, 96); font-size: 12px; background-color: rgb(20, 20, 20);\">2020 Yayasan Bina Taqwa 2020. All Rights Reserved.</span>', 4, '2020-11-22 11:23:47'),
-(12, 'dsadad', 2, '2020-11-26 16:47:25');
+(12, '0812345678910', 2, '2020-11-26 16:47:25');
 
 -- --------------------------------------------------------
 
@@ -180,7 +181,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- AUTO_INCREMENT for table `contact_us`
@@ -192,7 +193,7 @@ ALTER TABLE `contact_us`
 -- AUTO_INCREMENT for table `content`
 --
 ALTER TABLE `content`
-  MODIFY `id_content` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_content` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `news`

@@ -10,6 +10,9 @@
   <!-- <section class="contact-area margin-kontak-area-1"> -->
   <div class="blog-area mt-50 section-padding-100">
       <div class="container">
+
+          <?= $this->session->flashdata('message'); ?>
+
           <div class="row">
               <div class="col-12">
                   <div class="academy-blog-posts">
@@ -60,29 +63,32 @@
                           <!-- Contact Form Area -->
                           <div class="col-12 col-lg-7">
                               <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
-                                  <form action="#" method="post">
+                                  <form action="Kontak/kontak_kami" method="post">
                                       <div class="row">
                                           <div class="col-6">
                                               <div class="form-group">
                                                   <label for="nama_depan">Nama Depan</label>
-                                                  <input type="text" name="nama_depan" class="form-control" id="nama_depan" placeholder="Cth: Muhammad">
+                                                  <input type="text" name="nama_depan" class="form-control" id="nama_depan" placeholder="Cth: Muhammad" required>
                                               </div>
                                           </div>
                                           <div class="col-6">
                                               <div class="form-group">
                                                   <label for="nama_belakang">Nama Belakang</label>
-                                                  <input type="text" name="nama_belakang" class="form-control" id="nama_belakang" placeholder="Cth: Iqbal">
+                                                  <input type="text" name="nama_belakang" class="form-control" id="nama_belakang" placeholder="Cth: Iqbal" required>
                                               </div>
                                           </div>
                                       </div>
                                       <div class="form-group">
                                           <label for="alamat">Alamat</label>
-                                          <input type="text" name="alamat" class="form-control" id="alamat" placeholder="Masukkan Alamat">
+                                          <input type="text" name="alamat" class="form-control" id="alamat" placeholder="Masukkan Alamat" required>
                                       </div>
                                       <div class="form-group">
-                                          <label for="kritik">Kritik, Saran, dan Pertanyaan</label>
-                                          <textarea class="form-control" name="kritik" id="kritik" cols="30" rows="10" placeholder="Masukkan Kritik, Saran, dan Pertanyaan"></textarea>
-                                          <!-- <input type="text" name="kritik" class="form-control" id="kritik" placeholder="Masukkan Alamat"> -->
+                                          <label for="email">Email</label>
+                                          <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email" class="form-control" id="email" placeholder="Masukkan Email" required>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="pesan">Kritik, Saran, dan Pertanyaan</label>
+                                          <textarea class="form-control" name="pesan" id="pesan" cols="30" rows="10" placeholder="Masukkan Kritik, Saran, dan Pertanyaan" required='required'></textarea>
                                       </div>
                                       <div class="text-center">
                                           <button class="btn academy-btn mt-30" type="submit">Kontak Kami</button>
