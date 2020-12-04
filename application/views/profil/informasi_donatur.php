@@ -48,54 +48,23 @@
                     <!-- Latest Blog Posts Area -->
                     <div class="latest-blog-posts mb-30">
                         <h5>Latest Posts</h5>
-                        <!-- Single Latest Blog Post -->
-                        <div class="single-latest-blog-post d-flex mb-30">
-                            <div class="latest-blog-post-thumb">
-                                <img src="<?= base_url(); ?>assets/img/blog-img/lb-1.jpg" alt="">
+                        <!-- Latest Post -->
+                        <?php 
+                                foreach($latest_news as $data){  
+                            ?>
+                            <div class="single-latest-blog-post d-flex mb-30">
+                                <div class="latest-blog-post-thumb">
+                                    <img src="<?= base_url(); ?>assets/img/news/<?php echo $data->foto?>" alt="">
+                                </div>
+                                <div class="latest-blog-post-content">
+                                    <a href="<?php echo site_url()?>berita/detail_berita/<?php echo $data->id_news?>" class="post-title">
+                                        <h6><?php echo $data->judul?></h6>
+                                    </a>
+                                    <a href="a" class="post-date"><?php echo $data->tanggal_update?></a>
+                                </div>
                             </div>
-                            <div class="latest-blog-post-content">
-                                <a href="#" class="post-title">
-                                    <h6>New Courses for you</h6>
-                                </a>
-                                <a href="#" class="post-date">March 18, 2018</a>
-                            </div>
-                        </div>
-                        <!-- Single Latest Blog Post -->
-                        <div class="single-latest-blog-post d-flex mb-30">
-                            <div class="latest-blog-post-thumb">
-                                <img src="<?= base_url(); ?>assets/img/blog-img/lb-2.jpg" alt="">
-                            </div>
-                            <div class="latest-blog-post-content">
-                                <a href="#" class="post-title">
-                                    <h6>A great way to start</h6>
-                                </a>
-                                <a href="#" class="post-date">March 18, 2018</a>
-                            </div>
-                        </div>
-                        <!-- Single Latest Blog Post -->
-                        <div class="single-latest-blog-post d-flex mb-30">
-                            <div class="latest-blog-post-thumb">
-                                <img src="<?= base_url(); ?>assets/img/blog-img/lb-3.jpg" alt="">
-                            </div>
-                            <div class="latest-blog-post-content">
-                                <a href="#" class="post-title">
-                                    <h6>New Courses for you</h6>
-                                </a>
-                                <a href="#" class="post-date">March 18, 2018</a>
-                            </div>
-                        </div>
-                        <!-- Single Latest Blog Post -->
-                        <div class="single-latest-blog-post d-flex">
-                            <div class="latest-blog-post-thumb">
-                                <img src="<?= base_url(); ?>assets/img/blog-img/lb-4.jpg" alt="">
-                            </div>
-                            <div class="latest-blog-post-content">
-                                <a href="#" class="post-title">
-                                    <h6>Start your training</h6>
-                                </a>
-                                <a href="#" class="post-date">March 18, 2018</a>
-                            </div>
-                        </div>
+                                <?php }?>
+                            <!-- End Latest Post -->
                     </div>
 
                 </div>

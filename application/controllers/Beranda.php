@@ -19,6 +19,11 @@ class beranda extends CI_Controller
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	function __construct(){
+		parent::__construct();		
+		$this->load->model('berita_model');
+ 
+	}
 	public function index()
 	{
 		$category = 1; //get data header 1
@@ -33,8 +38,10 @@ class beranda extends CI_Controller
 		$data_header['data_header_1'] = $data_header_1['data_content_header_1'];
 		$data_header['data_header_2'] = $data_header_2['data_content_header_2'];
 
+		$data['popular_post'] = $this->berita_model->popularPost()->result();
+
 		$this->load->view('templates/header', $data_header);
-		$this->load->view('beranda/index');
+		$this->load->view('beranda/index', $data);
 		$this->load->view('templates/footer', $data_footer);
 	}
 }

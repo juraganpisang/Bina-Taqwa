@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2020 at 04:32 AM
+-- Generation Time: Dec 04, 2020 at 04:15 AM
 -- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- PHP Version: 7.2.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -48,7 +48,8 @@ INSERT INTO `category` (`id_category`, `category`) VALUES
 (9, 'manasik_haji'),
 (10, 'kegiatan_dakwah'),
 (11, 'kontak_kami'),
-(12, 'email');
+(12, 'email'),
+(13, 'berita');
 
 -- --------------------------------------------------------
 
@@ -108,20 +109,24 @@ INSERT INTO `content` (`id_content`, `content`, `category_id`, `last_update_at`)
 
 CREATE TABLE `news` (
   `id_news` int(11) NOT NULL,
+  `judul` varchar(100) NOT NULL,
   `news` longtext NOT NULL,
-  `penulis_id` int(11) NOT NULL,
+  `penulis_id` varchar(10) NOT NULL,
   `tanggal_publikasi` datetime NOT NULL DEFAULT current_timestamp(),
-  `tanggal_update` datetime NOT NULL,
-  `jumlah_view` int(11) NOT NULL
+  `tanggal_update` datetime NOT NULL DEFAULT current_timestamp(),
+  `jumlah_view` int(11) NOT NULL,
+  `foto` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `news`
 --
 
-INSERT INTO `news` (`id_news`, `news`, `penulis_id`, `tanggal_publikasi`, `tanggal_update`, `jumlah_view`) VALUES
-(1, 'lorem', 1, '2020-11-22 16:37:08', '2020-11-22 14:37:19', 0),
-(2, 'lorem ipsum', 1, '2020-11-25 16:37:08', '2020-11-22 14:37:19', 0);
+INSERT INTO `news` (`id_news`, `judul`, `news`, `penulis_id`, `tanggal_publikasi`, `tanggal_update`, `jumlah_view`, `foto`) VALUES
+(8, 'Judul 1', '<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.</p><p><br></p><p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>', 'admin', '2020-12-03 19:15:22', '2020-12-03 19:15:22', 3, '1.png'),
+(9, 'Judul zzaad11', '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br></p>', 'admin', '2020-12-03 19:15:56', '2020-12-04 02:33:00', 8, '1.png'),
+(12, 'Judul 31', '<p>test judul 3</p>', 'admin', '2020-12-03 20:59:23', '2020-12-04 08:41:00', 6, '1.png'),
+(13, 'Judul 4', '<p>Test Judul 4</p>', 'admin', '2020-12-03 20:59:52', '2020-12-03 20:59:52', 20, '1.png');
 
 -- --------------------------------------------------------
 
@@ -203,7 +208,7 @@ ALTER TABLE `content`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id_news` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_news` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `user`

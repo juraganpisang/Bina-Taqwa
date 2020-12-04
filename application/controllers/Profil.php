@@ -19,10 +19,16 @@ class profil extends CI_Controller
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	function __construct(){
+		parent::__construct();		
+		$this->load->model('berita_model');
+ 
+	}
 	public function tentang_yayasan()
 	{
 		$category = 5; //cek db
 		$data['data_content'] = $this->admin_model->content($category);
+		$data['latest_news'] = $this->berita_model->latestPost()->result();
 
 		$category = 1; //get data header 1
 		$data_header_1['data_content_header_1'] = $this->admin_model->content($category);
@@ -44,6 +50,7 @@ class profil extends CI_Controller
 	{
 		$category = 6; //cek db
 		$data['data_content'] = $this->admin_model->content($category);
+		$data['latest_news'] = $this->berita_model->latestPost()->result();
 
 		$category = 1; //get data header 1
 		$data_header_1['data_content_header_1'] = $this->admin_model->content($category);
@@ -65,6 +72,7 @@ class profil extends CI_Controller
 	{
 		$category = 7; //cek db
 		$data['data_content'] = $this->admin_model->content($category);
+		$data['latest_news'] = $this->berita_model->latestPost()->result();
 
 		$category = 1; //get data header 1
 		$data_header_1['data_content_header_1'] = $this->admin_model->content($category);
@@ -86,6 +94,7 @@ class profil extends CI_Controller
 	{
 		$category = 8; //cek db
 		$data['data_content'] = $this->admin_model->content($category);
+		$data['latest_news'] = $this->berita_model->latestPost()->result();
 
 		$category = 1; //get data header 1
 		$data_header_1['data_content_header_1'] = $this->admin_model->content($category);

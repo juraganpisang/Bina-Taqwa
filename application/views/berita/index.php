@@ -20,46 +20,30 @@
                 <div class="col-12 col-md-8">
                     <div class="academy-blog-posts">
                         <div class="row">
-
+                            <?php 
+                                foreach($list_berita as $item){
+                                    $firstnews=substr($item->news, 0, 100);
+                            ?>
                             <!-- Single Blog Start -->
                             <div class="col-12">
                                 <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
                                     <!-- Post Thumb -->
                                     <div class="blog-post-thumb mb-50">
-                                        <img src="assets/img/blog-img/1.jpg" alt="">
+                                        <img src="<?php echo base_url()?>/assets/img/news/<?php echo $item->foto?>" alt="">
                                     </div>
                                     <!-- Post Title -->
-                                    <a href="#" class="post-title">Berita 1</a>
+                                    <a href="#" class="post-title"><?php echo $item->judul?></a>
                                     <!-- Post Meta -->
                                     <div class="post-meta">
-                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> </p>
+                                        <p>By <a href="#"><?php echo $item->penulis_id?></a> | <a href="#"><?php echo $item->tanggal_update?></a> </p>
                                     </div>
                                     <!-- Post Excerpt -->
-                                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est.</p>
+                                    <p><?php echo $firstnews?></p>
                                     <!-- Read More btn -->
-                                    <a href="<?= base_url(); ?>berita/detail_berita" class="btn academy-btn btn-sm mt-15">Read More</a>
+                                    <a href="<?= base_url(); ?>berita/detail_berita/<?php echo $item->id_news?>" class="btn academy-btn btn-sm mt-15">Read More</a>
                                 </div>
                             </div>
-
-                            <!-- Single Blog Start -->
-                            <div class="col-12">
-                                <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="400ms">
-                                    <!-- Post Thumb -->
-                                    <div class="blog-post-thumb mb-50">
-                                        <img src="assets/img/blog-img/2.jpg" alt="">
-                                    </div>
-                                    <!-- Post Title -->
-                                    <a href="#" class="post-title">Berita 2</a>
-                                    <!-- Post Meta -->
-                                    <div class="post-meta">
-                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a></p>
-                                    </div>
-                                    <!-- Post Excerpt -->
-                                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est.</p>
-                                    <!-- Read More btn -->
-                                    <a href="#" class="btn academy-btn btn-sm mt-15">Read More</a>
-                                </div>
-                            </div>
+                            <?php }?>
                         </div>
                     </div>
                     <!-- Pagination Area Start -->
@@ -87,54 +71,22 @@
                         <!-- Latest Blog Posts Area -->
                         <div class="latest-blog-posts mb-30">
                             <h5>Latest Posts</h5>
-                            <!-- Single Latest Blog Post -->
+                            <?php 
+                                foreach($latest_news as $data){  
+                            ?>
                             <div class="single-latest-blog-post d-flex mb-30">
                                 <div class="latest-blog-post-thumb">
-                                    <img src="assets/img/blog-img/lb-1.jpg" alt="">
+                                    <img src="<?= base_url(); ?>assets/img/news/<?php echo $data->foto?>" alt="">
                                 </div>
                                 <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>New Courses for you</h6>
+                                    <a href="<?php echo site_url()?>berita/detail_berita/<?php echo $data->id_news?>" class="post-title">
+                                        <h6><?php echo $data->judul?></h6>
                                     </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
+                                    <a href="a" class="post-date"><?php echo $item->tanggal_update?></a>
                                 </div>
                             </div>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex mb-30">
-                                <div class="latest-blog-post-thumb">
-                                    <img src="assets/img/blog-img/lb-2.jpg" alt="">
-                                </div>
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>A great way to start</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex mb-30">
-                                <div class="latest-blog-post-thumb">
-                                    <img src="assets/img/blog-img/lb-3.jpg" alt="">
-                                </div>
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>New Courses for you</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex">
-                                <div class="latest-blog-post-thumb">
-                                    <img src="assets/img/blog-img/lb-4.jpg" alt="">
-                                </div>
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>Start your training</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
+                                <?php }?>
+                            <!-- End Latest Post -->
                         </div>
 
                     </div>
