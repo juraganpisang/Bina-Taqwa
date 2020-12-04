@@ -19,10 +19,10 @@ class admin extends CI_Controller
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	function __construct(){
-		parent::__construct();		
+	function __construct()
+	{
+		parent::__construct();
 		$this->load->model('berita_model');
- 
 	}
 	public function login()
 	{
@@ -302,7 +302,7 @@ class admin extends CI_Controller
 		$this->load->view('admin/templates/footer_admin', $data_footer);
 	}
 
-	public function berita()
+	public function berita($rowno = 0)
 	{
 		if (!$this->session->has_userdata('logged_in')) {
 			redirect(base_url('beranda'));
@@ -310,7 +310,7 @@ class admin extends CI_Controller
 
 		$category = 13; //cek db
 		$data['data_content'] = $this->admin_model->content($category);
-		$data['list_berita'] = $this->berita_model->getAllBerita()->result();
+		// $data['list_berita'] = $this->berita_model->getAllBerita()->result();
 
 		$category = 1; //get data Header 1
 		$data_header_1['data_content_header_1'] = $this->admin_model->content($category);
@@ -328,18 +328,81 @@ class admin extends CI_Controller
 		$data_header['data_content'] = $data['data_content'];
 		$data_header['data_header_1'] = $data_header_1['data_content_header_1'];
 		$data_header['data_header_2'] = $data_header_2['data_content_header_2'];
+		// Search text
+		$search_text = "";
+		if ($this->input->post('submit') != NULL) {
+			$search_text = $this->input->post('search');
+			$this->session->set_userdata(array("search" => $search_text));
+		} else {
+			if ($this->session->userdata('search') != NULL) {
+				$search_text = $this->session->userdata('search');
+			}
+		}
+
+		// Row per page
+		$rowperpage = 10;
+
+		// Row position
+		if ($rowno != 0) {
+			$rowno = ($rowno - 1) * $rowperpage;
+		}
+
+		// All records count
+		$allcount = $this->berita_model->getrecordCount($search_text);
+
+		// Get records
+		$users_record = $this->berita_model->getData($rowno, $rowperpage, $search_text);
+
+		// Pagination Configuration
+		$config['base_url'] = base_url() . 'berita/index';
+		$config['use_page_numbers'] = TRUE;
+		$config['total_rows'] = $allcount;
+		$config['per_page'] = $rowperpage;
+		// custom paging configuration
+		$config['first_link']       = 'First';
+		$config['last_link']        = 'Last';
+		$config['next_link']        = 'Next';
+		$config['prev_link']        = 'Prev';
+		$config['full_tag_open']    = '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
+		$config['full_tag_close']   = '</ul></nav></div>';
+		$config['num_tag_open']     = '<li class="page-item" style="list-style-type: none;"><span class="page-link">';
+		$config['num_tag_close']    = '</span></li>';
+		$config['cur_tag_open']     = '<li class="page-item active" style="list-style-type: none;"><span class="page-link">';
+		$config['cur_tag_close']    = '<span class="sr-only">(current)</span></span></li>';
+		$config['next_tag_open']    = '<li class="page-item" style="list-style-type: none;"><span class="page-link">';
+		$config['next_tagl_close']  = '<span aria-hidden="true">&raquo;</span></span></li>';
+		$config['prev_tag_open']    = '<li class="page-item" style="list-style-type: none;"><span class="page-link">';
+		$config['prev_tagl_close']  = '</span>Next</li>';
+		$config['first_tag_open']   = '<li class="page-item" style="list-style-type: none;"><span class="page-link">';
+		$config['first_tagl_close'] = '</span></li>';
+		$config['last_tag_open']    = '<li class="page-item" style="list-style-type: none;"><span class="page-link">';
+		$config['last_tagl_close']  = '</span></li>';
+		// Initialize
+		$this->pagination->initialize($config);
+
+		$data['pagination'] = $this->pagination->create_links();
+		$data['result'] = $users_record;
+		$data['row'] = $rowno;
+		$data['search'] = $search_text;
 
 		$this->load->view('admin/templates/header_admin', $data_header);
 		$this->load->view('admin/berita/berita_index', $data);
 		$this->load->view('admin/templates/footer_admin', $data_footer);
 	}
 
-	public function simpanBerita(){
+	public function clear_berita()
+	{
+		unset($_SESSION['search']);
+		redirect('admin/berita');
+	}
+
+	public function simpanBerita()
+	{
 		$judul_berita = $_POST['judul_berita'];
 		$isi_berita = $_POST['isi_berita'];
 		$foto = $this->do_upload();
 		$penulis_id = $this->session->userdata('username');
-		
+
 		$data = array(
 			'news' => $isi_berita,
 			'penulis_id' => $penulis_id,
@@ -357,7 +420,8 @@ class admin extends CI_Controller
 		}
 	}
 
-	private function do_upload(){
+	private function do_upload()
+	{
 		$config['upload_path']          = './assets/img/news/';
 		$config['allowed_types']        = 'gif|jpg|png';
 		$config['file_name']            = $_FILES['foto_berita']['name'];
@@ -371,18 +435,19 @@ class admin extends CI_Controller
 		if ($this->upload->do_upload('foto_berita')) {
 			return $this->upload->data("file_name");
 		}
-		
+
 		return "default.jpg";
 	}
 
-	public function seeMoreBerita($id){
+	public function seeMoreBerita($id)
+	{
 		if (!$this->session->has_userdata('logged_in')) {
 			redirect(base_url('beranda'));
 		}
 
 		$this->db->set('jumlah_view', '`jumlah_view`+ 1', FALSE);
-        $this->db->where('id_news', $id);
-        $this->db->update('news');
+		$this->db->where('id_news', $id);
+		$this->db->update('news');
 
 		$category = 13; //cek db
 		$data['data_content'] = $this->admin_model->content($category);
@@ -412,7 +477,8 @@ class admin extends CI_Controller
 		$this->load->view('admin/templates/footer_admin', $data_footer);
 	}
 
-	public function editBerita($id){
+	public function editBerita($id)
+	{
 		if (!$this->session->has_userdata('logged_in')) {
 			redirect(base_url('beranda'));
 		}
@@ -443,9 +509,10 @@ class admin extends CI_Controller
 		$this->load->view('admin/templates/footer_admin', $data_footer);
 	}
 
-	public function doEditBerita($id){
-		
-        date_default_timezone_set('Asia/Jakarta');
+	public function doEditBerita($id)
+	{
+
+		date_default_timezone_set('Asia/Jakarta');
 		$judul_berita = $_POST['judul_berita'];
 		$isi_berita = $_POST['isi_berita'];
 		$foto = $this->do_upload();
@@ -460,14 +527,14 @@ class admin extends CI_Controller
 			'tanggal_publikasi' => $tanggal_publikasi,
 			'tanggal_update' => $tanggal_update
 		);
-		
+
 		$result = $this->berita_model->doEditBerita('news', $data, $id);
 
 		redirect('admin/berita');
- 
 	}
 
-	public function hapusBerita($id){
+	public function hapusBerita($id)
+	{
 		$this->berita_model->hapusBerita('news', $id);
 		redirect(base_url('admin/berita'));
 	}

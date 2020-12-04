@@ -20,28 +20,28 @@
                 <div class="col-12 col-md-8">
                     <div class="academy-blog-posts">
                         <div class="row">
-                            <?php 
-                                foreach($detail_berita as $item){
+                            <?php
+                            foreach ($detail_berita as $item) {
                             ?>
-                            <!-- Detail Berita -->
-                            <div class="col-12">
-                                <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
-                                    <!-- Post Thumb -->
-                                    <div class="blog-post-thumb mb-50">
-                                        <img src="<?= base_url(); ?>assets/img/news/<?php echo $item->foto ?>" alt="">
+                                <!-- Detail Berita -->
+                                <div class="col-12">
+                                    <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
+                                        <!-- Post Thumb -->
+                                        <div class="blog-post-thumb mb-50">
+                                            <img src="<?= base_url(); ?>assets/img/news/<?php echo $item->foto ?>" alt="">
+                                        </div>
+                                        <!-- Post Title -->
+                                        <a href="#" class="post-title"><?php echo $item->judul ?></a>
+                                        <!-- Post Meta -->
+                                        <div class="post-meta">
+                                            <p>By <a href="#"><?php echo $item->penulis_id ?></a> | <a href="#"> <?php echo $item->tanggal_update ?></a> </p>
+                                        </div>
+                                        <!-- Post Excerpt -->
+                                        <p> <?php echo $item->news ?></p>
+                                        <!-- Read More btn -->
                                     </div>
-                                    <!-- Post Title -->
-                                    <a href="#" class="post-title"><?php echo $item->judul?></a>
-                                    <!-- Post Meta -->
-                                    <div class="post-meta">
-                                        <p>By <a href="#"><?php echo $item->penulis_id?></a> | <a href="#"> <?php echo $item->tanggal_update?></a> </p>
-                                    </div>
-                                    <!-- Post Excerpt -->
-                                    <p> <?php echo $item->news?></p>
-                                    <!-- Read More btn -->
                                 </div>
-                            </div>
-                                <?php }?>
+                            <?php } ?>
                             <!-- End Detail Berita -->
                         </div>
                     </div>
@@ -51,9 +51,11 @@
                     <div class="academy-blog-sidebar">
                         <!-- Blog Post Widget -->
                         <div class="blog-post-search-widget mb-30">
-                            <form action="#" method="post">
-                                <input type="search" name="search" id="Search" placeholder="Search">
-                                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            <form method='post' action="<?= base_url() ?>admin/berita">
+                                <input type='text' name='search' placeholder="Search">
+                                <button type='submit' id="search" name='submit' value='Submit' style="position: unset;width: 100%;">
+                                    <i class=" fa fa-search" aria-hidden="true"></i>
+                                </button>
                             </form>
                         </div>
 
@@ -61,21 +63,21 @@
                         <div class="latest-blog-posts mb-30">
                             <h5>Latest Posts</h5>
                             <!-- Latest Post -->
-                            <?php 
-                                foreach($latest_news as $data){  
+                            <?php
+                            foreach ($latest_news as $data) {
                             ?>
-                            <div class="single-latest-blog-post d-flex mb-30">
-                                <div class="latest-blog-post-thumb">
-                                    <img src="<?= base_url(); ?>assets/img/news/<?php echo $data->foto?>" alt="">
+                                <div class="single-latest-blog-post d-flex mb-30">
+                                    <div class="latest-blog-post-thumb">
+                                        <img src="<?= base_url(); ?>assets/img/news/<?php echo $data->foto ?>" alt="">
+                                    </div>
+                                    <div class="latest-blog-post-content">
+                                        <a href="<?php echo site_url() ?>admin/seeMoreBerita/<?php echo $data->id_news ?>" class="post-title">
+                                            <h6><?php echo $data->judul ?></h6>
+                                        </a>
+                                        <a href="a" class="post-date"><?php echo $item->tanggal_update ?></a>
+                                    </div>
                                 </div>
-                                <div class="latest-blog-post-content">
-                                    <a href="<?php echo site_url()?>admin/seeMoreBerita/<?php echo $data->id_news?>" class="post-title">
-                                        <h6><?php echo $data->judul?></h6>
-                                    </a>
-                                    <a href="a" class="post-date"><?php echo $item->tanggal_update?></a>
-                                </div>
-                            </div>
-                                <?php }?>
+                            <?php } ?>
                             <!-- End Latest Post -->
                         </div>
 

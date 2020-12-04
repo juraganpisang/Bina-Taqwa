@@ -41,13 +41,13 @@
                                     <?= $data_content['content']; ?>
                                 </div>
                                 <div class="mt-2 content_edit">
-                                    <?= form_open_multipart('admin/do_tentang_yayasan/'.$data_content["category"]) ?>
+                                    <?= form_open_multipart('admin/do_tentang_yayasan/' . $data_content["category"]) ?>
                                     <input type="hidden" value="<?= $data_content['id_content']; ?>" name="id_content">
                                     <textarea name="content" id="content"><?= $data_content['content']; ?></textarea>
                                     <?= form_submit('submit', 'Submit Post', 'class = "btn btn-primary mt-2"'); ?>
                                     <?= form_close(); ?>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -58,9 +58,11 @@
                 <div class="academy-blog-sidebar">
                     <!-- Blog Post Widget -->
                     <div class="blog-post-search-widget mb-30">
-                        <form action="#" method="post">
-                            <input type="search" name="search" id="Search" placeholder="Search">
-                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <form method='post' action="<?= base_url() ?>admin/berita">
+                            <input type='text' name='search' placeholder="Search">
+                            <button type='submit' id="search" name='submit' value='Submit' style="position: unset;width: 100%;">
+                                <i class=" fa fa-search" aria-hidden="true"></i>
+                            </button>
                         </form>
                     </div>
 
@@ -68,22 +70,22 @@
                     <div class="latest-blog-posts mb-30">
                         <h5>Latest Posts</h5>
                         <!-- Latest Post -->
-                        <?php 
-                                foreach($latest_news as $data){  
-                            ?>
+                        <?php
+                        foreach ($latest_news as $data) {
+                        ?>
                             <div class="single-latest-blog-post d-flex mb-30">
                                 <div class="latest-blog-post-thumb">
-                                    <img src="<?= base_url(); ?>assets/img/news/<?php echo $data->foto?>" alt="">
+                                    <img src="<?= base_url(); ?>assets/img/news/<?php echo $data->foto ?>" alt="">
                                 </div>
                                 <div class="latest-blog-post-content">
-                                    <a href="<?php echo site_url()?>admin/seeMoreBerita/<?php echo $data->id_news?>" class="post-title">
-                                        <h6><?php echo $data->judul?></h6>
+                                    <a href="<?php echo site_url() ?>admin/seeMoreBerita/<?php echo $data->id_news ?>" class="post-title">
+                                        <h6><?php echo $data->judul ?></h6>
                                     </a>
-                                    <a href="a" class="post-date"><?php echo $data->tanggal_update?></a>
+                                    <a href="a" class="post-date"><?php echo $data->tanggal_update ?></a>
                                 </div>
                             </div>
-                                <?php }?>
-                            <!-- End Latest Post -->
+                        <?php } ?>
+                        <!-- End Latest Post -->
                     </div>
 
                 </div>

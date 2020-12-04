@@ -23,7 +23,7 @@
 }
 
 ul li {
-	list-style-type: disc !important;
+	list-style-type: disc;
 }
 
 hr {
@@ -38,14 +38,12 @@ h3 {
 	.section-heading h3 {
 		font-size: 24px;
 	}
-
 	.test {
 		color: #000;
 		font-size: 12px;
 		font-weight: 500;
 		margin-top: 30px;
 	}
-
 	.margin-kontak-area-2 {
 		margin-bottom: 0px;
 	}

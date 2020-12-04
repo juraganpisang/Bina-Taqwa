@@ -96,32 +96,27 @@
             </div>
         </div>
         <div class="row">
-        <!-- List Berita -->
-        <?php 
-            foreach($popular_post as $item){
-            $firstnews=substr($item->news, 0, 100);
-        ?>
-        <div class="col-12 col-lg-6">
-            <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp" data-wow-delay="400ms">
-                <div class="popular-course-content">
-                    <h5><?php echo $item->judul?></h5>
-                    <span><?php echo $item->penulis_id?>, <?php echo $item->tanggal_update?></span>
-                    <div class="course-ratings">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
+            <!-- List Berita -->
+            <?php
+            foreach ($popular_post as $item) {
+                $firstnews = substr($item->news, 0, 100);
+            ?>
+                <div class="col-12 col-lg-6">
+                    <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="popular-course-content">
+                            <a href="<?= base_url(); ?>berita/detail_berita/<?php echo $item->id_news ?>">
+                                <h5><?php echo $item->judul ?></h5>
+                            </a>
+                            <span><?php echo $item->penulis_id ?>, <?php echo $item->tanggal_update ?></span>
+                            <p><?php echo $firstnews ?></p>
+                            <a href="<?php echo site_url() ?>admin/seeMoreBerita/<?php echo $item->id_news ?>" class="btn academy-btn btn-sm">See More</a>
+                        </div>
+                        <div class="popular-course-thumb bg-img" style="background-image: url(<?php echo base_url() ?>/assets/img/news/<?php echo $item->foto ?>)"></div>
                     </div>
-                    <p><?php echo $firstnews?></p>
-                    <a href="<?php echo site_url()?>admin/seeMoreBerita/<?php echo $item->id_news?>" class="btn academy-btn btn-sm">See More</a>
                 </div>
-                <div class="popular-course-thumb bg-img" style="background-image: url(<?php echo base_url()?>/assets/img/news/<?php echo $item->foto ?>)"></div>
-            </div>
-        </div>
-            <?php }?>
+            <?php } ?>
 
-        <!-- End List Berita -->
+            <!-- End List Berita -->
         </div>
     </div>
 </div>
@@ -129,12 +124,12 @@
 
 
 <!-- ##### Top Popular Courses Area Start ##### -->
-<div class="top-popular-courses-area section-padding-100-70">
+<div class="top-popular-courses-area section-padding-70">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
-                    <h3>Lokasi</h3>
+                    <h3 class="mb-5">Lokasi</h3>
                     <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1APQQ3O49xunXSvWyneWXX4lg-_jxFJLN" width="640" height="480"></iframe>
                 </div>
             </div>
